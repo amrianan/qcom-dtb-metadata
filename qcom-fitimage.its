@@ -45,6 +45,14 @@
 			data = /incbin/("./arch/arm64/boot/dts/qcom/qcs615-ride.dtb");
 			type = "flat_dt";
 		};
+		fdt-sa8775p-ride.dtb {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/sa8775p-ride.dtb");
+			type = "flat_dt";
+		};
+		fdt-sa8775p-ride-r3.dtb {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/sa8775p-ride-r3.dtb");
+			type = "flat_dt";
+		};
 	};
 
 	configurations {
@@ -95,6 +103,22 @@
 		conf-12 {
 			compatible = "qcom,qcs615v1.1-adp";
 			fdt = "fdt-qcs615-ride.dtb";
+		};
+		conf-13 {
+			compatible = "qcom,sa8775p-qam";
+			fdt = "fdt-sa8775p-ride.dtb";
+		};
+		conf-14 {
+			compatible = "qcom,sa8775pv2-qam";
+			fdt = "fdt-sa8775p-ride.dtb";
+		};
+		conf-15 {
+			compatible = "qcom,sa8775p-qamr2";
+			fdt = "fdt-sa8775p-ride-r3.dtb";
+		};
+		conf-16 {
+			compatible = "qcom,sa8775pv2-qamr2";
+			fdt = "fdt-sa8775p-ride-r3.dtb";
 		};
 	};
 };
