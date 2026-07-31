@@ -509,5 +509,17 @@
 			compatible = "qcom,glymur-crd-staging";
 			fdt = "fdt-glymur-crd.dtb", "fdt-glymur-staging.dtbo";
 		};
+		conf-66 {
+			compatible = "qcom,qcs6490-iot-camx";
+			fdt = "fdt-qcs6490-rb3gen2.dtb", "fdt-qcs6490-rb3gen2-vision-mezzanine-camx.dtbo";
+		};
+		conf-67 {
+			compatible = "qcom,qcs6490-iot-subtype2-camx";
+			fdt = "fdt-qcs6490-rb3gen2-vision-mezzanine.dtb", "fdt-qcs6490-rb3gen2-vision-mezzanine-camx.dtbo";
+		};
+		conf-68 {
+			compatible = "qcom,qcs5430-iot-camx";
+			fdt = "fdt-qcs6490-rb3gen2.dtb", "fdt-qcs5430-fps-camx.dtbo";
+		};
 	};
 };
