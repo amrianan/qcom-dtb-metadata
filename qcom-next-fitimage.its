@@ -246,6 +246,10 @@
 			data = /incbin/("./arch/arm64/boot/dts/qcom/glymur-staging.dtbo");
 			type = "flat_dt";
 		};
+		fdt-mahua-crd.dtb {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/mahua-crd.dtb");
+			type = "flat_dt";
+		};
 	};
 
 	configurations {
