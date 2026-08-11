@@ -521,5 +521,10 @@
 			compatible = "qcom,qcs5430-iot-camx";
 			fdt = "fdt-qcs6490-rb3gen2.dtb", "fdt-qcs5430-fps-camx.dtbo";
 		};
+		conf-69 {
+			compatible = "qcom,mahua-crd";
+			fdt = "fdt-mahua-crd.dtb";
+		};
+
 	};
 };
