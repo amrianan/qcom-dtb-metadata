@@ -162,7 +162,7 @@
 
 	boardrev {
 		r1.0 {
-			boardrev-id = <0x1000>;
+			boardrev-id = <0x0100>;
 		};
 
 		r1.1 {
@@ -170,11 +170,11 @@
 		};
 
 		r2.0 {
-			boardrev-id = <0x2000>;
+			boardrev-id = <0x0200>;
 		};
 
 		r2.1 {
-			boardrev-id = <0x2010>;
+			boardrev-id = <0x0201>;
 		};
 
 	};
