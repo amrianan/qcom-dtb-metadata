@@ -25,8 +25,8 @@
 			data = /incbin/("./arch/arm64/boot/dts/qcom/qcs6490-rb3gen2-industrial-mezzanine.dtb");
 			type = "flat_dt";
 		};
-		fdt-qcs6490-rb3gen2-industrial-mezzanine-bt-uart.dtbo {
-			data = /incbin/("./arch/arm64/boot/dts/qcom/qcs6490-rb3gen2-industrial-mezzanine-bt-uart.dtbo");
+		fdt-qcs6490-rb3gen2-industrial-mezzanine-bt-uart.dtb {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/qcs6490-rb3gen2-industrial-mezzanine-bt-uart.dtb");
 			type = "flat_dt";
 		};
 		fdt-lemans-evk.dtb {
@@ -254,6 +254,10 @@
 			data = /incbin/("./arch/arm64/boot/dts/qcom/purwa-staging.dtbo");
 			type = "flat_dt";
 		};
+		fdt-monaco-arduino-monza.dtb {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/monaco-arduino-monza.dtb");
+			type = "flat_dt";
+		};
 	};
 
 	configurations {
@@ -447,7 +451,7 @@
 		};
 		conf-48 {
 			compatible = "qcom,qcs6490-iot-subtype13";
-			fdt = "fdt-qcs6490-rb3gen2-industrial-mezzanine.dtb", "fdt-qcs6490-rb3gen2-industrial-mezzanine-bt-uart.dtbo";
+			fdt = "fdt-qcs6490-rb3gen2-industrial-mezzanine-bt-uart.dtb";
 		};
 		conf-49 {
 			compatible = "qcom,hamoa-evk-camx-el2kvm";
@@ -540,6 +544,10 @@
 		conf-71 {
 			compatible = "qcom,purwa-evk-el2kvm-staging";
 			fdt = "fdt-purwa-iot-evk.dtb", "fdt-x1-el2.dtbo", "fdt-purwa-staging.dtbo";
+		};
+		conf-72 {
+			compatible = "qcom,qcs8275-iot-subtype4";
+			fdt = "fdt-monaco-arduino-monza.dtb";
 		};
 	};
 };
