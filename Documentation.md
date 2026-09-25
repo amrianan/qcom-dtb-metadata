@@ -84,8 +84,47 @@ When board-subtype property is present in sub-node of board-subtype-storage-type
 When board-subtype property is present in sub-node of board-subtype-memory-size node, bits 8-11 represent the memory size and the remaining bits are ignored by the firmware.
 Remaining bits in the board-subtype property are reserved for future use.
 
-- Each sub-node under oem node must contain a property named oem-id which is of <u32> type.
-The oem-id represents the OEM. It is to be added by the OEM for selection of their board specific DT.
+- Each sub-node under the `oem` node must contain a property named `oem-id`. The `oem-id` identifies the OEM and is used for selecting the OEM-specific board Device Tree.
+
+Note:
+1. Each sub-node name under the `oem` node must be unique. Two sub-nodes must not
+   use the same name.
+2. The `oem-id` value `0x0` is reserved for Qualcomm and must not be assigned to
+   an OEM.
+3. OEM IDs must be assigned sequentially, starting with `0x1`. Each new OEM must
+   be assigned the next available `oem-id` value. An OEM must not use an
+   `oem-id` value that is already assigned to another OEM. Previously assigned
+   values must not be reused.
+
+   For example:
+
+	oem {
+		oem1board1 {
+			oem-id = <0x1>;
+		};
+
+		oem1board2 {
+			oem-id = <0x2>;
+		};
+	};
+
+   When adding another OEM, the next available value must be used. Since `0x0` is reserved for Qualcomm and `0x1` and `0x2` are already assigned in the example above, the next OEM must use `0x3`.
+
+  For example:
+
+	oem {
+		oem1board1 {
+			oem-id = <0x1>;
+		};
+
+		oem1board2 {
+			oem-id = <0x2>;
+		};
+
+		oem2board1 {
+			oem-id = <0x3>;
+		};
+	};
 
 - Each sub-node under softsku node must contain a property named softsku-id which is of <u32> type.
 The softsku-id represents the software SKU. It is added for soft SKU (license) based selection of DT.
