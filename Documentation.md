@@ -91,8 +91,8 @@ Note:
    use the same name.
 2. The `oem-id` value `0x0` is reserved for Qualcomm and must not be assigned to
    an OEM.
-3. OEM IDs must be assigned sequentially, starting with `0x1`. Each new OEM must
-   be assigned the next available `oem-id` value. An OEM must not use an
+3. OEM IDs must select the oem-id sequentially, starting with `0x1`. Each new OEM must
+   select the next available `oem-id` value. An OEM must not use an
    `oem-id` value that is already assigned to another OEM. Previously assigned
    values must not be reused.
 
@@ -126,7 +126,7 @@ Note:
 		};
 	};
 
-4. The `compatible` property must identify the platform and board variant.
+4. The `compatible` property in ITS file must identify the platform and board variant.
 
    For Qualcomm boards, use the Qualcomm vendor prefix followed by the platform and subtype. For example:
 	compatible = "qcom,qcs8275-iot-subtype4";
