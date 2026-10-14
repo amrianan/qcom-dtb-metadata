@@ -193,6 +193,14 @@
 			data = /incbin/("./arch/arm64/boot/dts/qcom/purwa-evk-camx.dtbo");
 			type = "flat_dt";
 		};
+		fdt-eliza-cqs-evk-emmc.dtb {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/eliza-cqs-evk-emmc.dtb");
+			type = "flat_dt";
+		};
+		fdt-eliza-cqs-evk-ufs.dtb {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/eliza-cqs-evk-ufs.dtb");
+			type = "flat_dt";
+		};
 		fdt-shikra-cqm-evk.dtb {
 			data = /incbin/("./arch/arm64/boot/dts/qcom/shikra-cqm-evk.dtb");
 		};
@@ -545,6 +553,14 @@
 		conf-68 {
 			compatible = "qcom,kalambo-crd";
 			fdt = "fdt-kalambo-crd.dtb";
+		};
+		conf-69 {
+			compatible = "qcom,elizacqs-evk-emmc";
+			fdt = "fdt-eliza-cqs-evk-emmc.dtb";
+		};
+		conf-70 {
+			compatible = "qcom,elizacqs-evk-ufs";
+			fdt = "fdt-eliza-cqs-evk-ufs.dtb";
 		};
 	};
 };
